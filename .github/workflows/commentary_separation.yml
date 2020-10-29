@@ -13,46 +13,49 @@ jobs:
 #         python-version: [3.5, 3.6, 3.7, 3.8]
 
     steps:
-    - uses: actions/checkout@master
-      with:
-        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-        fetch-depth: 1 # Because of this, you will fail to push refs to dest repo
-        ref: trigger-branch
-    - uses: actions/checkout@master
-      with:
-        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-        fetch-depth: 1 # Because of this, you will fail to push refs to dest repo
-        repository: ashtadhyayi-com/data
-        ref: master
-        path: ashtadhyayi-com-data
-    - uses: actions/checkout@master
-      with:
-        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-        fetch-depth: 1 # Because of this, you will fail to push refs to dest repo
-        ref: master
-        path: master
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install git+https://github.com/sanskrit-coders/doc_curation/@master -U
-        python -m pip install git+https://github.com/ashtadhyayi/data_curation@master -U
-    - name: Create local changes
-      env:
-        TRANSFORM_REPO_TOKEN: ${{ secrets.VISH_TOKEN }}
-        REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        cp -rnf change_details master/
-        python -c "from ashtadhyayi_data.reader.ashtadhyayi_com import transformer; transformer.transform(indir=\"`pwd`/ashtadhyayi-com-data/\", outdir=\"`pwd`/master\", dry_run=False)"
-    - name: Commit files
-      run: |
-        cd master
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"
-        git add --all
-        git diff-index --quiet HEAD || git commit -m "Add changes" -a
-        remote_repo="https://${GITHUB_ACTOR}:${TRANSFORM_REPO_TOKEN}@github.com/sanskrit/ashtadhyayi_com_transforms.git"
-        git push "${remote_repo}" HEAD:master|| (cd .. && git pull --rebase && git commit --allow-empty -m "Dummy commit to trigger workflow rerun upon 'push race condition'." && git push "https://${GITHUB_ACTOR}:${TRANSFORM_REPO_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:trigger_branch)
+      - name: Check out trigger-branch
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 1 # Because of this, you will fail to push refs to dest repo
+          ref: trigger-branch
+      - name: Check out ashtadhyayi-com/data
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 1 # Because of this, you will fail to push refs to dest repo
+          repository: ashtadhyayi-com/data
+          ref: master
+          path: ashtadhyayi-com-data
+      - name: Check out master branch
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 1 # Because of this, you will fail to push refs to dest repo
+          ref: master
+          path: master
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install git+https://github.com/sanskrit-coders/doc_curation/@master -U
+          python -m pip install git+https://github.com/ashtadhyayi/data_curation@master -U
+      - name: Create local changes
+        env:
+          TRANSFORM_REPO_TOKEN: ${{ secrets.VISH_TOKEN }}
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cp -rnf change_details master/
+          python -c "from ashtadhyayi_data.reader.ashtadhyayi_com import transformer; transformer.transform(indir=\"`pwd`/ashtadhyayi-com-data/\", outdir=\"`pwd`/master\", dry_run=False)"
+      - name: Commit files
+        run: |
+          cd master
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add --all
+          git diff-index --quiet HEAD || git commit -m "Add changes" -a
+          remote_repo="https://${GITHUB_ACTOR}:${TRANSFORM_REPO_TOKEN}@github.com/sanskrit/ashtadhyayi_com_transforms.git"
+          git push "${remote_repo}" HEAD:master|| (cd .. && git pull --rebase && git commit --allow-empty -m "Dummy commit to trigger workflow rerun upon 'push race condition'." && git push "https://${GITHUB_ACTOR}:${TRANSFORM_REPO_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:trigger_branch)
