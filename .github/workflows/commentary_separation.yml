@@ -13,12 +13,12 @@ jobs:
 #         python-version: [3.5, 3.6, 3.7, 3.8]
 
     steps:
-      - name: Check out trigger-branch
+      - name: Check out trigger_branch
         uses: actions/checkout@master
         with:
 #          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 1 # Because of this, you will fail to push refs to dest repo
-          ref: trigger-branch
+          ref: trigger_branch
       - name: Check out ashtadhyayi-com/data
         uses: actions/checkout@master
         with:
