@@ -1,4 +1,4 @@
-name: Babylon generation
+name: Transform
 
 on:
   push:
