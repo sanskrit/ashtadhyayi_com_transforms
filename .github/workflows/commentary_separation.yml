@@ -44,7 +44,7 @@ jobs:
         TRANSFORM_REPO_TOKEN: ${{ secrets.VISH_TOKEN }}
         REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        cp -rnf change_details master
+        cp -rnf change_details master/
         python -c "from ashtadhyayi_data.reader.ashtadhyayi_com import transformer; transformer.transform(indir=\"`pwd`/ashtadhyayi-com-data/\", outdir=\"`pwd`/master\", dry_run=False)"
     - name: Commit files
       run: |
