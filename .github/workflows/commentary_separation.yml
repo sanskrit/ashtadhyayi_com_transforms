@@ -15,11 +15,8 @@ jobs:
     steps:
       - name: Check out trigger-branch
         uses: actions/checkout@master
-        env:
-          GIT_TRACE: 1
-          GIT_CURL_VERBOSE: 1
         with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+#          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 1 # Because of this, you will fail to push refs to dest repo
           ref: trigger-branch
       - name: Check out ashtadhyayi-com/data
