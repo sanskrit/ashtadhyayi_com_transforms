@@ -1,8 +1,8 @@
 name: Transform
 
-on: push
-#  push:
-#    branches: [ trigger_branch ]
+on:
+  push:
+    branches: [ trigger_branch ]
 
 jobs:
   build:
