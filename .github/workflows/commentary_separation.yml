@@ -3,7 +3,7 @@ name: Transform
 on:
   push:
     branches: [ trigger_branch ]
-# The above does not work. Tried asking at https://github.community/t/push-to-branch-not-triggering-workflow/140508 .
+    # This file should be present on the trigger branches!
 
 jobs:
   build:
