@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/381778413
-last_commit_log: Removing deprecated Code.
+https://github.com/ashtadhyayi-com/data/actions/runs/382442018
+last_commit_log: fixing word forms
