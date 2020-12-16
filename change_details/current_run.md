@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/422719661
-last_commit_log: Prayogas from Neeti shatakam
+https://github.com/ashtadhyayi-com/data/actions/runs/425390498
+last_commit_log: typos corrected
