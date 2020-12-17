@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/428138283
-last_commit_log: Merge pull request #52 from chaitanya-lakkundi/master
+https://github.com/ashtadhyayi-com/data/actions/runs/428139992
+last_commit_log: Merge branch 'master' of https://github.com/ashtadhyayi-com/data
