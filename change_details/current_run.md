@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/736883261
-last_commit_log: Merge pull request #65 from chaitanya-lakkundi/master
+https://github.com/ashtadhyayi-com/data/actions/runs/736900003
+last_commit_log: Replace pipes (|) in sutra numbers by dots (.) to make it consistent with the UI. For example [[1|1|1]] and [[1।1।1]] both change to [[1.1.1]]
