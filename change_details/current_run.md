@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/736900003
-last_commit_log: Replace pipes (|) in sutra numbers by dots (.) to make it consistent with the UI. For example [[1|1|1]] and [[1।1।1]] both change to [[1.1.1]]
+https://github.com/ashtadhyayi-com/data/actions/runs/737036053
+last_commit_log: Fix errors in sutra-number-bracketing. Also, replace "a|b|c" notation with "a.b.c" for consistency.
