@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/762011352
-last_commit_log: fix SK dhatu numbers
+https://github.com/ashtadhyayi-com/data/actions/runs/762149704
+last_commit_log: .
