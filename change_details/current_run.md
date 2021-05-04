@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/808945966
-last_commit_log: Merge branch 'master' of https://github.com/ashtadhyayi-com/data
+https://github.com/ashtadhyayi-com/data/actions/runs/809070505
+last_commit_log: adding sk reference to dhatupath
