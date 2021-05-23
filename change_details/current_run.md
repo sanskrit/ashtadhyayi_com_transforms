@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/869374583
-last_commit_log: .
+https://github.com/ashtadhyayi-com/data/actions/runs/869701919
+last_commit_log: fix lrung forms
