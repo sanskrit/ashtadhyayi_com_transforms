@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/869701919
-last_commit_log: fix lrung forms
+https://github.com/ashtadhyayi-com/data/actions/runs/872072944
+last_commit_log: prayogas from Raghuvamsham 11th sarga
