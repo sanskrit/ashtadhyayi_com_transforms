@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/877057572
-last_commit_log: .
+https://github.com/ashtadhyayi-com/data/actions/runs/877338577
+last_commit_log: adding upasarga meanings
