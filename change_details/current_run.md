@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/888692325
-last_commit_log: .
+https://github.com/ashtadhyayi-com/data/actions/runs/888730605
+last_commit_log: adding णिजन्त forms
