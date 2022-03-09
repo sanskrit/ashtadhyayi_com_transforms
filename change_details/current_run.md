@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/1928600810
-last_commit_log: automated copy from data-edit to data
+https://github.com/ashtadhyayi-com/data/actions/runs/1955301090
+last_commit_log: add भूषणसार
