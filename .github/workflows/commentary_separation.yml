@@ -4,6 +4,10 @@ on:
   push:
     branches: [ trigger_branch ]
 # The above does not work. Tried asking at https://github.community/t/push-to-branch-not-triggering-workflow/140508 .
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        default: 'warning'
 
 jobs:
   build:
