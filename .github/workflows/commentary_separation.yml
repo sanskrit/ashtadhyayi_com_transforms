@@ -2,8 +2,7 @@ name: Transform
 
 on:
   push:
-    branches: [ trigger_branch ]
-# The above does not work. Tried asking at https://github.community/t/push-to-branch-not-triggering-workflow/140508 .
+    branches: [ '*' ]
   workflow_dispatch:
     inputs:
       logLevel:
