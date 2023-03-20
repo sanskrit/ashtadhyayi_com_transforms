@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/4473605779
-last_commit_log: adding स्वोपज्ञा and अम्बाकर्त्री files
+https://github.com/ashtadhyayi-com/data/actions/runs/4473612000
+last_commit_log: automated copy from data-edit to data
