@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/4912430833
-last_commit_log: Merge pull request #208 from tapaskhanra1998/patch-80
+https://github.com/ashtadhyayi-com/data/actions/runs/4933714008
+last_commit_log: Merge branch 'master' of https://github.com/ashtadhyayi-com/data
