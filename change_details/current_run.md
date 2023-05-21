@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/5038629890
-last_commit_log: Merge pull request #215 from MadhuGeethe/Paramalaghumanjoosha_Ch5_Corrections
+https://github.com/ashtadhyayi-com/data/actions/runs/5038631302
+last_commit_log: Merge pull request #216 from MadhuGeethe/Paramalaghumanjoosha_Ch6_Corrections
