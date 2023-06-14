@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/5263571098
-last_commit_log: automated copy from data-edit to data
+https://github.com/ashtadhyayi-com/data/actions/runs/5265134573
+last_commit_log: Merge pull request #230 from tapaskhanra1998/patch-93
