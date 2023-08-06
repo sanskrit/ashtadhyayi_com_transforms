@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/5767028630
-last_commit_log: automated copy from data-edit to data
+https://github.com/ashtadhyayi-com/data/actions/runs/5777250556
+last_commit_log: Merge pull request #248 from tapaskhanra1998/master-1
