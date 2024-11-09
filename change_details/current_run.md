@@ -1,2 +1,2 @@
-https://github.com/ashtadhyayi-com/data/actions/runs/11736696756
-last_commit_log: shabdapatha_v2
+https://github.com/ashtadhyayi-com/data/actions/runs/11753461984
+last_commit_log: add all amara words to shabdapatha
